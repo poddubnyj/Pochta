@@ -17,4 +17,13 @@ public class Stamp implements com.logistic.api.model.post.Stamp {
     }
 
 
+    @Override
+    public Address getPostOfficeAddress() {
+        return this.postOfficeAddress;
+    }
+
+    @Override
+    public Date getStampDate() {
+        return this.stampDate;
+    }
 }

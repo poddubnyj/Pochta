@@ -29,4 +29,44 @@ public class Package implements com.logistic.api.model.post.Package {
         this.sender = sender;
     }
 
+
+    @Override
+    public String getPackageId() {
+        return this.id;
+    }
+
+    @Override
+    public int getWeight() {
+        return this.weight;
+    }
+
+    @Override
+    public Type getType() {
+        return this.type;
+    }
+
+    @Override
+    public Address getReceiverAddress() {
+        return this.receiver.getAddress();
+    }
+
+    @Override
+    public Address getSenderAddress() {
+        return this.sender.getAddress();
+    }
+
+    @Override
+    public FullName getSenderFullName() {
+        return this.sender.getFullName();
+    }
+
+    @Override
+    public FullName getReceiverFullName() {
+        return this.receiver.getFullName();
+    }
+
+    @Override
+    public List<Stamp> getStamps() {
+        return this.stamps;
+    }
 }

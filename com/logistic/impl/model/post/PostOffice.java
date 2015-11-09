@@ -25,4 +25,43 @@ public class PostOffice implements com.logistic.api.model.post.PostOffice {
     }
 
 
+    @Override
+    public Stamp getStamp() {
+        return null;
+    }
+
+    @Override
+    public Address getAddress() {
+        return this.address;
+    }
+
+    @Override
+    public Package.Type getAcceptableTypes() {
+        return this.acceptableType;
+    }
+
+    @Override
+    public int getMaxWeight() {
+        return this.maxWeight;
+    }
+
+    @Override
+    public boolean sendPackage(Package parcel) {
+        return false;
+    }
+
+    @Override
+    public boolean receivePackage(Package parcel) {
+        return false;
+    }
+
+    @Override
+    public int getCode() {
+        return this.address.getCode();
+    }
+
+    @Override
+    public Point getGeolocation() {
+        return this.coordinates;
+    }
 }
