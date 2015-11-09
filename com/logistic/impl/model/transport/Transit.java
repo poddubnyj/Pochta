@@ -25,11 +25,6 @@ public class Transit implements com.logistic.api.model.transport.Transit {
 
     @Override
     public double getPrice() {
-        return price;
-    }
-
-    @Override
-    public String toString() {
-        return "Transit {" + price + "}" + this.offices;
+        return this.price;
     }
 }
