@@ -18,6 +18,7 @@ public interface Package {
     public FullName getSenderFullName();
     public FullName getReceiverFullName();
     public List<Stamp> getStamps();
+    public void addStamp(Stamp newStamp);
 
     /**
      * http://www.ups.com/worldshiphe

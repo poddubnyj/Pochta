@@ -47,12 +47,13 @@ public class PostOffice implements com.logistic.api.model.post.PostOffice {
 
     @Override
     public boolean sendPackage(Package parcel) {
-        return false;
+        return !parcel.getReceiverAddress().equals(address);
     }
 
     @Override
     public boolean receivePackage(Package parcel) {
-        return false;
+        parcel.addStamp(getStamp());
+        return true;
     }
 
     @Override
